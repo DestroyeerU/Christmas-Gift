@@ -38,7 +38,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/donation.css">
   <link rel="stylesheet" href="styles/donationObjects.css">
   <title>Doação Natalina</title>
