@@ -14,8 +14,42 @@ body {
   height: 100vh;
 }
 
+main {
+  width: 100%;
+  max-width: 1100px;
+  padding: 51px 60px 120px;
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
 button {
   cursor: pointer;
+}
+
+main .title {
+  margin-bottom: 28px;
+}
+
+main .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--light);
+}
+
+.dark {
+  color: var(--dark);
 }
 
 :root {
@@ -24,5 +58,7 @@ button {
   --border: #DFE1E4;
   --input-placeholder: #84839D;
   --blue: #1a73e8;
+  --blue-darken: #2F68C4;
   --white: #fff;
+  --whiten: #F0F0F5;
 }

@@ -19,7 +19,7 @@
 
   <main>
     <h1 class="title">Faça um doação Natalina!</h1>
-    <form action="donation.php" method="POST" class="row">
+    <form action="donation.php" method="POST" enctype="multipart/form-data" class="row">
       <section class="left-side">
         <p class="description">
           Você vai tornar alguém da comunidade de Passo Largo mais feliz.
@@ -27,12 +27,12 @@
 
         <div class="user-data-container">
           <div class="input-wrapper">
-            <input type="text" class="animated-input" required="required">
+            <input type="text" class="animated-input" name="name" required="required">
             <span>Nome Completo</span>
           </div>
 
           <div class="input-wrapper">
-            <input type="text" class="animated-input" required="required">
+            <input type="text" class="animated-input" name="phone" required="required">
             <span>Telefone</span>
           </div>
 
@@ -45,18 +45,18 @@
 
           <div class="row">
             <div class="input-wrapper">
-              <input type="number" class="animated-input" required="required">
+              <input type="number" class="animated-input" name="clothes" required="required">
               <span>Roupas (Unidades)</span>
             </div>
 
             <div class="input-wrapper">
-              <input type="number" class="animated-input" required="required">
+              <input type="number" class="animated-input" name="food" required="required">
               <span>Alimentos (Kg)</span>
             </div>
           </div>
 
           <div class="input-wrapper">
-            <input type="number" class="animated-input" required="required">
+            <input type="number" class="animated-input" name="money" required="required">
             <span>Valor em dinheiro (R$)</span>
           </div>
 
@@ -66,7 +66,7 @@
 
       <section class="right-side">
         <label class="custom-file-upload">
-          <input type="file" onchange="loadImagePreview()"/>
+          <input type="file" onchange="loadImagePreview()" name="photo"/>
 
           <div class="default">
             <img src="assets/upload.svg" alt="upload">
@@ -81,7 +81,7 @@
           comprometendo à levar esses itens.
         </p>
 
-        <button>
+        <button type="submit">
           Confirmar Doação
         </button>
       </section>
