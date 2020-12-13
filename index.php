@@ -8,15 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="areaFileSelector/areaFileSelector.css">
-  <link rel="stylesheet" href="animatedInput/animatedInput.css">
+  <link rel="stylesheet" href="styles/index.css">
+
+  <link rel="stylesheet" href="components/areaFileSelector/areaFileSelector.css">
+  <link rel="stylesheet" href="components/animatedInput/animatedInput.css">
+
   <title>Doação Natalina</title>
 </head>
 <body>
 
   <main>
     <h1 class="title">Faça um doação Natalina!</h1>
-    <form class="row">
+    <form action="donation.php" method="POST" class="row">
       <section class="left-side">
         <p class="description">
           Você vai tornar alguém da comunidade de Passo Largo mais feliz.
@@ -85,7 +88,7 @@
     </form>
   </main>
 
-  <script src="areaFileSelector/areaFileSelector.js"></script>
+  <script src="components/areaFileSelector/areaFileSelector.js"></script>
 </body>
 </html>
 
