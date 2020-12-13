@@ -33,6 +33,11 @@ function readDonations() {
   return $donations;
 }
 
+function readDonationsGoal() {
+  $donations = readJson('donations-goal.json');
+
+  return $donations;
+}
 
 function readCustomFile($fileName) {
   $path = "settings" . DIRECTORY_SEPARATOR . $fileName;

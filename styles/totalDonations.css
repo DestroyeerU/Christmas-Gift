@@ -1,0 +1,13 @@
+.center {
+  width: 100%;
+  max-width: 424px;
+  margin: auto;
+}
+
+.donation {
+  max-width: 424px;
+}
+
+.donation .details {
+  width: 220px;
+}

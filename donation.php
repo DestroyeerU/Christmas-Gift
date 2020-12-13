@@ -39,7 +39,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styles/dontation.css">
+  <link rel="stylesheet" href="styles/donation.css">
+  <link rel="stylesheet" href="styles/donationObjects.css">
   <title>Doação Natalina</title>
 
   <style>
@@ -100,13 +101,13 @@
           </span>
         </div>
 
-        <a href="/donations/total.php" class="link">
+        <a href="/totalDonations.php" class="link">
           Confira o total de doações coletadas
         </a>
       </section>
     </div>
 
-    <a href="/donations/total.php" class="link">
+    <a href="/totalDonations.php" class="link">
       Confira o total de doações coletadas
     </a>
   </main>
