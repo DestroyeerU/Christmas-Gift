@@ -1,0 +1,49 @@
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .animated-input {
+  width: 100%;
+  padding: 12px 20px;
+
+  font-size: 16px;
+  color: var(--dark);
+
+  border: 2px solid var(--border);
+  border-radius: 8px;
+
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+.input-wrapper .animated-input:focus {
+  border: 2px solid var(--blue);
+}
+
+.input-wrapper span {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+
+  padding: 0 3px;
+  background-color: var(--white);
+
+  font-size: 16px;
+  color: var(--input-placeholder);
+
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: transform 0.1s ease;
+}
+
+.input-wrapper .animated-input:focus ~ span,
+.input-wrapper .animated-input:valid ~ span {
+  font-size: 13px;
+
+  transform: translateX(-8px) translateY(-30px);
+}
+
+.input-wrapper .animated-input:focus ~ span {
+  color: var(--blue);
+}
