@@ -14,8 +14,12 @@ body {
   height: 100vh;
 }
 
+button {
+  cursor: pointer;
+}
+
 main {
-  padding: 51px 60px;
+  padding: 51px 60px 120px;
 
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -27,7 +31,7 @@ main .row {
 }
 
 main .title {
-  margin-bottom: 33px;
+  margin-bottom: 28px;
 }
 
 .title {
@@ -48,11 +52,11 @@ main .title {
 
 .left-side {
   width: 100%;
-  max-width: 508px;
+  max-width: 450px;
 }
 
 .left-side .user-data-container {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .left-side .user-data-container .input-wrapper:nth-child(2) {
@@ -65,34 +69,41 @@ main .title {
 }
 
 .left-side .donations-container .description {
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .left-side .donations-container .row {
   display: flex;
   justify-content: space-between;
 
-  margin-top: 35px;
+  margin-top: 25px;
   margin-bottom: 20px;
 }
 
+.left-side .donations-container .row .input-wrapper{
+  max-width: 200px;
+}
+
 .right-side {
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
 
   margin-left: 65px;
 }
 
 .right-side .description {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .right-side button {
   width: 100%;
 
-  margin-top: 40px;
+  margin-top: auto;
 
-  padding: 18px;
+  padding: 15px;
   border-radius: 9px;
 
   font-size: 20px;
