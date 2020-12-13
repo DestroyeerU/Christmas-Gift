@@ -1,5 +1,16 @@
+<?php
+  header("Content-type: text/css");
+
+  $fileName = $_FILES['photo']['name'];
+  $hasFile = strcmp($fileName, "") === 0;
+?>
 main {
   padding: 51px 60px 90px;
+}
+
+
+main > a {
+  margin-left: auto;
 }
 
 .link {
@@ -11,6 +22,7 @@ main {
 .left-side {
   width: 100%;
   max-width: 450px;
+
 }
 
 .left-side .donations {
@@ -48,7 +60,6 @@ main {
 }
 
 .right-side {
-  display: flex;
   flex-direction: column;
 }
 

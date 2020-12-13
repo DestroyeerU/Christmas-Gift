@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styles/dontation.css">
-  <title>Doação Natalina</title>
-</head>
-<body>
 
 <?php
   $name = $_POST['name'];
@@ -29,7 +17,37 @@
   $directoryImagePath = 'images' . DIRECTORY_SEPARATOR . $fileName;
 
   move_uploaded_file($fullTempPath, $fullFileNamePath);
+
+  $hasFile = $fileName !== "";
 ?>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/dontation.php">
+  <title>Doação Natalina</title>
+
+  <style>
+    main .row {
+      justify-content: <?=!$hasFile ? "center" : "" ?>;
+    }
+
+    main > a {
+      display: <?=!$hasFile ? "block": "none"?>;
+    }
+
+    .right-side {
+      display: <?=!$hasFile ? "none" : "flex" ?>;
+    }
+  </style>
+</head>
+<body>
 
   <main>
     <div class="row">
@@ -62,6 +80,7 @@
             </span>
           </div>
         </div>
+
       </section>
 
       <section class="right-side">
@@ -77,6 +96,10 @@
         </a>
       </section>
     </div>
+
+    <a href="/donations/total.php" class="link">
+      Confira o total de doações coletadas
+    </a>
   </main>
 </body>
 </html>
