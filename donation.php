@@ -2,6 +2,8 @@
 <html lang="pt-br">
 
 <?php
+  require('scripts/databaseManager.php');
+
   $name = $_POST['name'];
   $phone = $_POST['phone'];
   $clothes = $_POST['clothes'];
@@ -10,6 +12,7 @@
 
   $fileName= $_FILES['photo']['name'];
   $fullTempPath = $_FILES['photo']['tmp_name'];
+  $hasFile = $fileName !== "";
 
   $rootPath = getcwd();
   $fullFileNamePath = $rootPath . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR. $fileName;
@@ -18,7 +21,13 @@
 
   move_uploaded_file($fullTempPath, $fullFileNamePath);
 
-  $hasFile = $fileName !== "";
+  $donationsSaved = readDonations();
+
+  $clothesUpdated = $clothes + $donationsSaved['clothes'];
+  $foodUpdated = $food + $donationsSaved['food'];
+  $moneyUpdated = $money + $donationsSaved['money'];
+
+  updateDonations($clothesUpdated, $foodUpdated, $moneyUpdated);
 ?>
 
 
@@ -30,7 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styles/dontation.php">
+  <link rel="stylesheet" href="styles/dontation.css">
   <title>Doação Natalina</title>
 
   <style>

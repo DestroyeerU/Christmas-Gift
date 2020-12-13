@@ -1,9 +1,3 @@
-<?php
-  header("Content-type: text/css");
-
-  $fileName = $_FILES['photo']['name'];
-  $hasFile = strcmp($fileName, "") === 0;
-?>
 main {
   padding: 51px 60px 90px;
 }
