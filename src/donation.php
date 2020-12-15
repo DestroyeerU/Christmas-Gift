@@ -101,13 +101,13 @@
           </span>
         </div>
 
-        <a href="/totalDonations.php" class="link">
+        <a href="/src/totalDonations.php" class="link">
           Confira o total de doações coletadas
         </a>
       </section>
     </div>
 
-    <a href="/totalDonations.php" class="link">
+    <a href="/src/totalDonations.php" class="link">
       Confira o total de doações coletadas
     </a>
   </main>
